@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2B4BCB5242BDB6300419C1D /* GaussLegendre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4BCB4242BDB6300419C1D /* GaussLegendre.swift */; };
 		A2E287FD242B9DEE009806E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E287FC242B9DEE009806E7 /* AppDelegate.swift */; };
 		A2E287FF242B9DEE009806E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E287FE242B9DEE009806E7 /* ViewController.swift */; };
 		A2E28802242B9DEE009806E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E28800242B9DEE009806E7 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2B4BCB4242BDB6300419C1D /* GaussLegendre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaussLegendre.swift; sourceTree = "<group>"; };
 		A2E287F9242B9DEE009806E7 /* benchmark_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = benchmark_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E287FC242B9DEE009806E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2E287FE242B9DEE009806E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2B4BCB2242BDA3B00419C1D /* Recources */ = {
+			isa = PBXGroup;
+			children = (
+				A2E287FC242B9DEE009806E7 /* AppDelegate.swift */,
+				A2E28803242B9DEF009806E7 /* Assets.xcassets */,
+				A2E28808242B9DEF009806E7 /* Info.plist */,
+			);
+			path = Recources;
+			sourceTree = "<group>";
+		};
+		A2B4BCB3242BDAD900419C1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2B4BCB4242BDB6300419C1D /* GaussLegendre.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2B4BCB6242BDD6E00419C1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2E28800242B9DEE009806E7 /* Main.storyboard */,
+				A2E28805242B9DEF009806E7 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2B4BCB7242BDDAE00419C1D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2E287FE242B9DEE009806E7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A2E287F0242B9DEE009806E7 = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +134,10 @@
 		A2E287FB242B9DEE009806E7 /* benchmark_ios */ = {
 			isa = PBXGroup;
 			children = (
-				A2E287FC242B9DEE009806E7 /* AppDelegate.swift */,
-				A2E287FE242B9DEE009806E7 /* ViewController.swift */,
-				A2E28800242B9DEE009806E7 /* Main.storyboard */,
-				A2E28803242B9DEF009806E7 /* Assets.xcassets */,
-				A2E28805242B9DEF009806E7 /* LaunchScreen.storyboard */,
-				A2E28808242B9DEF009806E7 /* Info.plist */,
+				A2B4BCB3242BDAD900419C1D /* Model */,
+				A2B4BCB2242BDA3B00419C1D /* Recources */,
+				A2B4BCB7242BDDAE00419C1D /* Controller */,
+				A2B4BCB6242BDD6E00419C1D /* View */,
 			);
 			path = benchmark_ios;
 			sourceTree = "<group>";
@@ -258,6 +293,7 @@
 			files = (
 				A2E287FF242B9DEE009806E7 /* ViewController.swift in Sources */,
 				A2E287FD242B9DEE009806E7 /* AppDelegate.swift in Sources */,
+				A2B4BCB5242BDB6300419C1D /* GaussLegendre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +469,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = benchmark_ios/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/benchmark_ios/Recources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = benchmark_ios/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/benchmark_ios/Recources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
