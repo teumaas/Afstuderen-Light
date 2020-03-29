@@ -20,9 +20,12 @@ import {
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 export default class App extends Component {
+  timeout = 0;
   state: {
     time: string,
     time2: string,
+    stopTimer: Boolean,
+    elapsedTime: Number
   };
 
   constructor(props: Props) {
@@ -32,6 +35,8 @@ export default class App extends Component {
       time2: 'Press button to calculate',
     };
   }
+
+  
 
   render() {
     return (
@@ -58,15 +63,22 @@ export default class App extends Component {
             title="getOneByPi"
             onPress={() => {
               console.log('Start');
-              let startTime = Timing.now();
+              // this.toggleStopwatch();
+              this.setState({stopTimer: false});
+              createTime();
+              // let startTime = Timing.now();
               for (let i = 0; i < numIters; i += 1) {
-                getOneByPi(10000000);
+                getOneByPi(10000);
               }
-              let endTime = Timing.now();
+              // let endTime = Timing.now();
               console.log('Finish');
-              let iterTime = (endTime - startTime) / numIters;
-              console.log(iterTime);
-              this.setState({time2: iterTime.toString()});
+              // clearInterval(interval);
+              // let iterTime = (endTime - startTime) / numIters;
+              // this.toggleStopwatch();
+              // iterTime = this.stopwatch.getMsecs;
+              console.log(time);
+              stopTime();
+              this.setState({time2: time, stopTimer: true});
             }}
           />
           <Text style={styles.textStyle}>{this.state.time2}</Text>
@@ -116,6 +128,22 @@ const styles = StyleSheet.create({
 //Pi calc
 
 const numIters = 100;
+var time = 0;
+var timer = 0;
+
+function createTime() {
+  console.log('Function createTime()');
+  console.log('first timer val: ' + timer);
+  timer = setInterval(() => {
+    console.log('Inside Timer');
+    console.log('Timer val: ' + time);
+    time++;
+  }, 1);
+}
+function stopTime() {
+  clearInterval(timer);
+  console.log('STOP');
+}
 
 function gaussLegendre(iterations) {
   let a = 1.0;
