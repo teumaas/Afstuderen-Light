@@ -44,7 +44,7 @@ export default class App extends Component {
               console.log('Start');
               let startTime = Timing.now();
               for (let i = 0; i < numIters; i += 1) {
-                gaussLegendre(10000000);
+                gaussLegendre(1000000);
               }
               let endTime = Timing.now();
               console.log('Finish');
@@ -60,7 +60,7 @@ export default class App extends Component {
               console.log('Start');
               let startTime = Timing.now();
               for (let i = 0; i < numIters; i += 1) {
-                getOneByPi(10000000);
+                getOneByPi(1000000);
               }
               let endTime = Timing.now();
               console.log('Finish');

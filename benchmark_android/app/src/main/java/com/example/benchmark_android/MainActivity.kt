@@ -8,7 +8,7 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val numIters = 1000
+    val numIters = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             var i = 0
             while (i < numIters) {
                 //calc.getOneByPi(1000000)
-                calc.mathPow(10000000)
+                calc.getOneByPi(1000000)
                 i += 1
             }
             val endTime = System.currentTimeMillis()
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             val calc = PiCalculator()
             var i = 0
             while (i < numIters) {
-                calc.getOneByPi(1000000)
+                calc.gaussLegendre(10000000)
                 i += 1
             }
             val endTime = System.currentTimeMillis()
