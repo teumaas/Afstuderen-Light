@@ -66,14 +66,14 @@ class _HomeState extends State<Home> {
     final BenchmarkResultPrinter printer = BenchmarkResultPrinter();
     printer.addResult(
       description: 'Pi calc tracker',
-      value: watch.elapsedMicroseconds / _kNumIters,
+      value: watch.elapsedMilliseconds / _kNumIters,
       //value: (finishDate - startdate)/_kNumIters,
       unit: 'µs per iteration',
       name: 'iteration',
     );
     printer.printToStdout();
     setState(() {
-      gaussLegendreTime ='${watch.elapsedMicroseconds / _kNumIters}';
+      gaussLegendreTime ='${watch.elapsedMilliseconds / _kNumIters}';
       //time ='${(finishDate - startdate)/_kNumIters}';
     });
   }
@@ -89,14 +89,14 @@ class _HomeState extends State<Home> {
     final BenchmarkResultPrinter printer = BenchmarkResultPrinter();
     printer.addResult(
       description: 'Pi calc tracker',
-      value: watch.elapsedMicroseconds / _kNumIters,
+      value: watch.elapsedMilliseconds / _kNumIters,
       //value: (finishDate - startdate)/_kNumIters,
       unit: 'µs per iteration',
       name: 'iteration',
     );
     printer.printToStdout();
     setState(() {
-      borweinTime ='${watch.elapsedMicroseconds / _kNumIters}';
+      borweinTime ='${watch.elapsedMilliseconds / _kNumIters}';
       //time ='${(finishDate - startdate)/_kNumIters}';
     });
   }
